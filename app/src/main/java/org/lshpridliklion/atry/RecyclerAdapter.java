@@ -64,7 +64,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
     @Override
-
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview,null);
@@ -76,9 +75,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-
     @Override
-
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         final Recycler_item item=items.get(position);
@@ -92,7 +89,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.cardview.setOnClickListener(new View.OnClickListener() {
 
             @Override
-
             public void onClick(View v) {
 
                 Toast.makeText(context,item.getTitle(),Toast.LENGTH_SHORT).show();
@@ -106,7 +102,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
     @Override
-
     public int getItemCount() {
 
         return this.items.size();
